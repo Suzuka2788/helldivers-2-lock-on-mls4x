@@ -1,2 +1,38 @@
-# helldivers-2-lock-on-mls4x
-Suzuka's Lock-on MLS4X: Helldivers 2 BSL addon. Laser on = original laser guidance; laser off = P-33 style lock-on with homing rockets.
+# Suzuka's Lock-on MLS4X v1.0.1（正式版）
+
+安装包：`Suzukas-Lock-on-MLS4X-v1.0.1.zip`
+SHA-256：`4C0EFC2A3ADFF7ECA626677F46C5514E65B60C19EEEC065D12C41AB4709B198C`
+
+## 更新记录
+- v1.0.1：支持把 MLS-4X 放在额外栏位（extra_slot 模组）中使用。v1.0.0 只在支援武器栏（3 号位）生效。
+- v1.0.0：第一个正式版。
+
+## 功能
+- 激光开启：原版激光制导，不做任何改动。
+- 激光关闭：P-33 式锁定。瞄准敌人自动获取目标，按 P-33 原版参数锁定。
+- 锁定界面为自绘的 P-33 样式：
+  - 屏幕中央一个大圆；
+  - 三个折角框住目标，边旋转边收缩；
+  - 获取中为黄色，锁定后变绿。
+- 锁定后开火，火箭会追踪锁定的目标，四发弹药每一发都追踪。
+- 追踪弹体为 P-33 制导弹，伤害、穿甲、爆炸保持 MLS-4X 原版数值。
+
+## 固定设置（无菜单）
+| 项目 | 设置 |
+|---|---|
+| 激光关闭锁定 | 开 |
+| 火箭追踪 | 开 |
+| 原生锁定实验 | 关 |
+| 自绘圆圈和三角 | 开 |
+| 锁定逻辑 | P-33（读取游戏数值） |
+| 追踪弹体 | P-33 制导弹 |
+
+## 安装
+1. 需要 Bingus Shared Loader v15 或更新版本（API 1），不需要 Mod Options Menu。
+2. 在加载器中添加本 zip 并部署。本包与之前的实验版 GUID 相同，会直接替换实验版。
+
+## 说明
+- 适配的游戏版本：game.dll SHA-256 `2e2c3b7c…18f51e`，exe `f5fee03d…5f06`。游戏更新后，模组检测到版本不符会停止运行，需要等待适配。
+- 日志：`%LOCALAPPDATA%\CowboyBingus\Helldivers2\Logs\SuzukaMLS4XLaserOffLock.log`
+- MLS-4X 放在支援武器栏或额外栏位（extra_slot 模组）中均可使用。
+- 火箭追踪的实现参考了 P-11 Stim Homing 模组。
